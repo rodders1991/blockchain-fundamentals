@@ -12,6 +12,7 @@
     "blockchain:validate": ""
   },
   "dependencies": {
+    "mongodb": "^3.0.10",
     "sha.js": "^2.4.11",
     "yargs": "^11.0.0"
   }

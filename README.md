@@ -1,12 +1,10 @@
 # Blockchain Fundamentals
 
-This repository demonstrates a basic blockchain, the blockchain is saved in a json file from within the `blockchain` folder.
+This repository simulates a single node basic blockchain running in a collection in mongodb. The purpose of this app is to demonstrate how blocks are added and the chain validated.
 
 ## Prerequisites
 
-- Install node => 6.10
-- Install npm => 3.10
-- Install the required global dependencies using npm; `npm install -g yarn`
+- Install docker and Docker Compose
 
 ## Setup
 

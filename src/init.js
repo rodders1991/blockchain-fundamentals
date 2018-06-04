@@ -13,13 +13,16 @@ const createGenesis = () => {
       fs.unlink('../blockchain/chain.json');
     }
 
-    // Create generic json object
-    const gBlock = mine({
-      data: 'Hello Genesis',
-      prevHash: '0000000000000000000000000000000000000000000000000000000000000000',
-    }, argv.d);
+    // Set some generic data for the genesis block
+    const data = 'Hello Genesis';
 
-    console.log(JSON.stringify(gBlock))
+    // Mine hash and find nonce
+    const hashNonce = mine(data, argv.d);
+
+    // Write genesis block to file
+
+    // prevHash: '0000000000000000000000000000000000000000000000000000000000000000',
+    console.log(JSON.stringify(hashNonce))
 };
 
 createGenesis();

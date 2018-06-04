@@ -2,18 +2,17 @@ const crypto = require('crypto');
 const { MAX_HASH } = require('../constants');
 const DIFF_LEVEL = process.argv[0];
 
-module.exports = (blockRecord, difficultyLevel) => {
+module.exports = (blockData, difficultyLevel) => {
   let nonce = 0;
-  let blockHash = hashBlockRecord(blockRecord, nonce);
+  let blockHash = hashBlockRecord(blockData, nonce);
   const targetHash = formatTargetHash(Number.parseInt(difficultyLevel));
   while(!isValidBlockHash(blockHash, targetHash)) {
     ++nonce;
-    blockHash = hashBlockRecord(blockRecord, nonce);
+    blockHash = hashBlockRecord(blockData, nonce);
   }
   return {
     nonce,
-    data: blockRecord.data,
-    prevHash: blockRecord.prevHash,
+    data: blockData,
     hash: blockHash,
   }
 }
@@ -22,11 +21,9 @@ const isValidBlockHash = (hash, targetHash) => {
   return Number.parseInt(hash, 16) < Number.parseInt(targetHash, 16);
 }
 
-const hashBlockRecord = (blockRecord, nonce) => {
-  // Add nonce to block record
-  blockRecord.nonce = nonce;
+const hashBlockRecord = (blockData, nonce) => {
   const hash = crypto.createHash('sha256');
-  hash.update(JSON.stringify(blockRecord));
+  hash.update(JSON.stringify({data: blockData, nonce}));
   return hash.digest('hex');
 };
 
