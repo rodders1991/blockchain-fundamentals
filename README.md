@@ -4,9 +4,13 @@ This repository demonstrates a basic blockchain, the blockchain is saved in a js
 
 ## Prerequisites
 
-- Please install node => 6.10
-- Please install npm => 3.10
-- Then install the required global dependencies using npm; `npm install -g yarn`
+- Install node => 6.10
+- Install npm => 3.10
+- Install the required global dependencies using npm; `npm install -g yarn`
+
+## Setup
+
+- Run `yarn` to install node modules
 
 ## Installing the a Blockchain
 
