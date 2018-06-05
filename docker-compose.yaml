@@ -17,7 +17,7 @@ services:
     environment:
       - APP_NAME=blockchain-fundamentals
       - MONGO_URI=mongodb://mongodb/${APP_NAME}
-    command: npm run blockchain:init -- -d 5
+    command: npm run blockchain:init -- -d5
 
   mongodb:
       image: mongo:latest

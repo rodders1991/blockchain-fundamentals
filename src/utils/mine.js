@@ -1,8 +1,7 @@
-const crypto = require('crypto');
-const { MAX_HASH } = require('../constants');
-const DIFF_LEVEL = process.argv[0];
+import crypto from 'crypto';
+import { MAX_HASH } from '../constants';
 
-module.exports = (blockData, difficultyLevel) => {
+export default (blockData, difficultyLevel) => {
   let nonce = 0;
   let blockHash = hashBlockRecord(blockData, nonce);
   const targetHash = formatTargetHash(Number.parseInt(difficultyLevel));

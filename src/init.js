@@ -1,5 +1,5 @@
-const fs = require('fs');
-const mine = require('./utils/mine');
+import fs from 'fs';
+import mine from './utils/mine';
 
 const argv = require('yargs')
   .usage('Usage: $0 -d [blockchain-refs]')
