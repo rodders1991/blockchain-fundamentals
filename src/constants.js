@@ -1,1 +1,1 @@
-exports.MAX_HASH = 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff';
+export const MAX_HASH = 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff';

@@ -8,21 +8,21 @@ const argv = require('yargs')
   .argv;
 
 const createGenesis = () => {
-    // Check chain file exists, delete file and start again
-    if(fs.exists('../blockchain/chain.json')) {
-      fs.unlink('../blockchain/chain.json');
-    }
+  // Check chain file exists, delete file and start again
+  if (fs.exists('../blockchain/chain.json')) {
+    fs.unlink('../blockchain/chain.json');
+  }
 
-    // Set some generic data for the genesis block
-    const data = 'Hello Genesis';
+  // Set some generic data for the genesis block
+  const data = 'Hello Genesis';
 
-    // Mine hash and find nonce
-    const hashNonce = mine(data, argv.d);
+  // Mine hash and find nonce
+  const hashNonce = mine(data, argv.d);
 
-    // Write genesis block to file
+  // Write genesis block to file
 
-    // prevHash: '0000000000000000000000000000000000000000000000000000000000000000',
-    console.log(JSON.stringify(hashNonce))
+  // prevHash: '0000000000000000000000000000000000000000000000000000000000000000',
+  console.log(JSON.stringify(hashNonce))
 };
 
 createGenesis();
