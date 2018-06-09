@@ -5,19 +5,14 @@
   "author": "rodders1991",
   "license": "MIT",
   "scripts": {
-    "blockchain:init": "babel-node src/init.js",
-    "blockchain:clear": "",
-    "blockchain:reset": "npm run blockchain:init && npm run blockchain:clear",
-    "blockchain:add-block": "",
-    "blockchain:validate": ""
+    "test": "mocha --compilers js:babel-core/register test/*.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
-    "mongodb": "^3.0.10",
-    "sha.js": "^2.4.11",
-    "yargs": "^11.0.0"
+    "mocha": "^5.2.0",
+    "sha.js": "^2.4.11"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",

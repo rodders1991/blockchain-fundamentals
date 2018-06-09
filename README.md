@@ -12,7 +12,7 @@ This repository simulates a single node basic blockchain running in a collection
 
 ## Installing the a Blockchain
 
-- Running the command `npm run blockchain:init -- -d` creates a json file on the blockchain folder and a Genesis block. You can add a value at the end of the command between 1 and 64, this determines the difficulty level for finding a hash, 1 being the hardest.
+- todo
 
 ## Adding a block to the chain
 
